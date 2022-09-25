@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>ChirKut</title>
+  </head>
+  <body>
+    <div class="chat-container">
+      <!-- header app name and logo -->
+      <header class="chat-header">
+        <!-- header name , img and  -->
+        <h1><img src="https://i.ibb.co/VJHkHH0/download-1.jpg" alt=""> ChairKut</h1>
+        <!-- leave button -->
+        <a id="leave-btn" class="btn">Leave Group</a>
+      </header>
+      <!-- main content -->
+      <main class="chat-main">
+        <!-- app side var -->
+        <div class="chat-sidebar">
+          <!-- group name -->
+          <h3><i class="fas fa-comments"></i> Group Name:</h3>
+          <!-- room -->
+          <h2 id="room-name"></h2>
+          <!-- friends name -->
+          <h3><i class="fas fa-users"></i> Friends</h3>
+          <!-- all friend -->
+          <ul id="users"></ul>
+        </div>
+        
+         <div class="chat-message-container">
+          <!-- all chat message -->
+          <div class="chat-messages"> </div>
+            <!-- chat input field and button -->
+            <div class="chat-form-container">
+              <form id="chat-form">
+                <input
+                  id="msg"
+                  type="text"
+                  placeholder="Write a message ..."
+                  required
+                  autocomplete="off"
+                />
+                <!-- send button -->
+                <button class="btn send-btn"><i class="fas fa-paper-plane"></i> Send</button>
+              </form>
+            </div>
+        </div>
+      </main>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+      integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+      crossorigin="anonymous">
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
